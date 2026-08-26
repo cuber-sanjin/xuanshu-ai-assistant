@@ -1,0 +1,11 @@
+# 构建上下文排除：减小镜像构建上下文，避免把本地产物/密钥带进镜像
+.venv/
+venv/
+__pycache__/
+*.pyc
+tests/
+xuan_shu.db
+xuan_shu.db-*
+.env
+Dockerfile
+.dockerignore

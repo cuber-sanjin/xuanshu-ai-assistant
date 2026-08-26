@@ -1,0 +1,8 @@
+# 构建上下文排除：node_modules 与构建产物不进构建上下文
+# 注意：nginx.conf 必须保留（Dockerfile 需要 COPY 它），不要加进忽略列表
+node_modules/
+dist/
+.vite/
+.env
+Dockerfile
+.dockerignore

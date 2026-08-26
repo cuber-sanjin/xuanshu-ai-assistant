@@ -1,0 +1,71 @@
+/* 全局样式：玄枢深空主题（科幻 + 古风科技感） */
+
+:root {
+  color-scheme: dark;
+
+  /* 玄枢配色：深空蓝底 + 青色光效 */
+  --bg-base: #0a1220;
+  --bg-panel: rgba(13, 27, 48, 0.8);
+  --text-main: #e2ecff;
+  --text-dim: #5a7a9a;
+  --accent: #22d3ee;
+  --accent-soft: #0ea5e9;
+  --border-glow: rgba(148, 197, 255, 0.15);
+
+  font-family: system-ui, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-main);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  /* 深空氛围：顶部青色光晕 + 极淡网格（CSS 渐变，非图片）+ 星空微点 */
+  background:
+    radial-gradient(ellipse at 50% -20%, rgba(14, 165, 233, 0.16), transparent 60%),
+    radial-gradient(ellipse at 85% 110%, rgba(34, 211, 238, 0.06), transparent 55%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(148, 197, 255, 0.02) 0,
+      rgba(148, 197, 255, 0.02) 1px,
+      transparent 1px,
+      transparent 56px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(148, 197, 255, 0.02) 0,
+      rgba(148, 197, 255, 0.02) 1px,
+      transparent 1px,
+      transparent 56px
+    ),
+    var(--bg-base);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 滚动条：细、青色、半透明 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(34, 211, 238, 0.25);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 211, 238, 0.45);
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
